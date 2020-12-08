@@ -39,3 +39,14 @@ interface Reportable {
 const printSummary = ({summary}: Reportable):void => {
   console.log(summary())
 }
+
+
+const drink = {
+  color: 'brown',
+  carbonated: true,
+  sugar: 40,
+  summary: (): string => `My drink has ${this.sugar} grams of sugar`
+}
+
+printSummary(drink)
+
