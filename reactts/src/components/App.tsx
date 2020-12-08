@@ -1,16 +1,13 @@
-import './App.css';
+import React from 'react'
 
-const App = () => {
+const App = ():JSX.Element => {
   return(
     <div className="App">
       <header className="App-header">
-        <p>
-          Hi
-        </p>
+        <p>Hi</p>
       </header>
     </div>
   )
 }
 
-
-export default App;
+export default App 
