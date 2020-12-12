@@ -1,13 +1,31 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { Todo, fetchTodos } from '../actions'
+import { StoreState } from '../reducers'
 
-const App = ():JSX.Element => {
-  return(
-    <div className="App">
-      <header className="App-header">
-        <p>Hi</p>
-      </header>
-    </div>
-  )
+interface AppProps {
+  todos: Todo[]
+  fetchTodos(): any
 }
 
-export default App 
+class _App extends React.Component<AppProps> {
+  render(){
+    return(
+
+      <div className="App">
+        <header className="App-header">
+          <p>Hi</p>
+        </header>
+      </div>
+    )
+  }
+}
+
+const mapStateToProps = ({ todos }: StoreState): { todos: Todo[]} => {
+  return { todos }
+}
+  
+export const App = connect(
+  mapStateToProps,
+  { fetchTodos }
+)(_App)

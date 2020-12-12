@@ -2,7 +2,8 @@ import axios from 'axios'
 
 const url = 'https://jsonplaceholder.typicode.com/todos/1'
 
-interface Todo { userId: 1,
+interface Todo { 
+  userId: 1,
   id: 1,
   title: 'delectus aut autem',
   completed: false 
