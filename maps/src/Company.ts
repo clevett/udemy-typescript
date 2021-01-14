@@ -1,6 +1,7 @@
-import faker from 'fake'
+import faker from 'faker'
+import { Mappable } from "./CustomMap"
 
-class Company {
+class Company implements Mappable {
   companyName: string
   catchPhrase: string
   location: {
@@ -10,11 +11,15 @@ class Company {
 
   constructor() {
     this.companyName = faker.company.companyName()
-    this.catchPhrase = faker.comapny.catchPhrase()
+    this.catchPhrase = faker.company.catchPhrase()
     this.location = {
       lat: parseFloat(faker.address.latitude()),
-      lng: parseFloat(faker.address.longitute())
+      lng: parseFloat(faker.address.longitude())
     }
+  }
+
+  markerContent(): string {
+    return `Company Name: ${this.companyName}`
   }
 }
 
