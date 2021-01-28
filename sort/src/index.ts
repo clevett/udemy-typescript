@@ -1,13 +1,7 @@
-class Sorter {
-    constructor(public collection: number[]) {
-        this.collection = collection
-    }
+import Sorter from "./Sorter"
+import NumberCollection from "./NumberCollection"
+import NumbersCollection from "./NumberCollection"
 
-    sort():number[] {
-        return this.collection.sort()
-    }
-}
-
-const sorter = new Sorter([10, 3, -5, 0])
+const numbersCollection  = new NumbersCollection([1000, 3. -5, 9])
+const sorter = new Sorter(numbersCollection.data)
 sorter.sort()
-console.log(sorter.collection)
