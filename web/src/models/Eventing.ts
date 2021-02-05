@@ -22,3 +22,5 @@ export class Eventing {
     }
 
 }
+
+export default Eventing
